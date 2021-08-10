@@ -2,7 +2,7 @@
 
 A plugin to display a random string from a list. Once shown, the string is removed from the list.
 
-![demo.mp4](docs/demo.mp4)
+https://user-images.githubusercontent.com/6481750/128868175-1e54b3f8-58a7-4882-934e-718983e1f2bd.mp4
 
 ## Features
 
