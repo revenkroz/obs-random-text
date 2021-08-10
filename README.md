@@ -8,6 +8,7 @@ https://user-images.githubusercontent.com/6481750/128868175-1e54b3f8-58a7-4882-9
 
 - Simple animation with customization
 - Optional sound effect on result
+- Hotkeys support (you can set hotkeys in OBS preferences)
 - Language selection
 - Saving settings
 
