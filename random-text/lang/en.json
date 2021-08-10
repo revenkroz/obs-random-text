@@ -1,0 +1,13 @@
+{
+    "description": "Selects and displays a random string from the input field. After displaying, plugin removes it.\n\nYou can configure a hotkey to select a random string in the OBS settings (Hotkeys -> \"Select random string\").",
+    "options": "Options",
+    "source": "Source",
+    "with_animation": "Enable animation",
+    "time_to_display": "[Animation] Show result in... (s)",
+    "roll_delay": "[Animation] Roll delay (ms)",
+    "deceleration": "[Animation] Deceleration",
+    "play_sound": "Play sound",
+    "sound_path": "[Sound] Sound path",
+    "get_random": "Select random string",
+    "reset": "Reset"
+}
