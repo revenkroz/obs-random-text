@@ -3,17 +3,20 @@ from pathlib import Path
 from random import shuffle, randrange
 from time import sleep
 import json
+import os
 
 SETTINGS_FILENAME = 'random-text.settings.json'
 PROJECT_DIR = 'random-text'
 AVAILABLE_LANGUAGES = ['en', 'ru']
+
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # ------------------------------------------------------------
 
 class Lang:
     def __init__(self, code):
         print(code)
-        lang_file = Path(script_path() + '/' + PROJECT_DIR + '/lang/' + code + '.json')
+        lang_file = Path(SCRIPT_DIR + '/' + PROJECT_DIR + '/lang/' + code + '.json')
         if not lang_file.is_file():
             raise Exception('Lang file not found')
 
@@ -164,7 +167,7 @@ def save():
         print(e, "can't save settings")
 
 def load():
-    file = Path(script_path() + '/' + PROJECT_DIR + '/' + SETTINGS_FILENAME)
+    file = Path(SCRIPT_DIR + '/' + PROJECT_DIR + '/' + SETTINGS_FILENAME)
     if file.is_file():
         data = obs.obs_data_create_from_json(file.read_text('utf-8'))
         lang_code = obs.obs_data_get_string(data, "lang")
@@ -237,7 +240,7 @@ def script_defaults(settings):
     obs.obs_data_set_default_int(settings, "deceleration", Data.deceleration)
 
     # sound
-    obs.obs_data_set_default_string(settings, "sound_path", script_path() + PROJECT_DIR + "/alert.mp3")
+    obs.obs_data_set_default_string(settings, "sound_path", SCRIPT_DIR + PROJECT_DIR + "/alert.mp3")
 
     # language
     obs.obs_data_set_default_string(settings, "lang", "en")
