@@ -42,6 +42,7 @@ class Data:
 
     # animation
     with_animation = False
+    remove_line = False
     deceleration = 50
     roll_delay = 42
     time_to_display = 2
@@ -100,7 +101,11 @@ def update_text():
         # update source
         text = ''
         if len(Data.lines) > 0:
-            text = Data.lines.pop()
+            shuffle(Data.lines)
+            if (Data.remove_line):
+              text = Data.lines.pop()
+            else:
+              text = Data.lines[0]
 
         if Data.with_animation:
             animate_selection(settings, source, Data.lines + [text])
@@ -112,7 +117,7 @@ def update_text():
 
         if Data.play_sound:
             play_sound()
-        
+
         # save changes
         obs.obs_data_set_string(Data._settings_, "text", "\n".join(Data.lines))
         save()
@@ -216,6 +221,7 @@ def script_update(settings):
 
     # animation
     Data.with_animation = obs.obs_data_get_bool(settings, "with_animation")
+    Data.remove_line = obs.obs_data_get_bool(settings, "remove_line")
     Data.deceleration = obs.obs_data_get_int(settings, "deceleration")
     Data.time_to_display = obs.obs_data_get_int(settings, "time_to_display")
     Data.roll_delay = obs.obs_data_get_int(settings, "roll_delay")
@@ -235,6 +241,7 @@ def script_defaults(settings):
 
     # animation
     obs.obs_data_set_default_bool(settings, "with_animation", Data.with_animation)
+    obs.obs_data_set_default_bool(settings, "remove_line", Data.remove_line)
     obs.obs_data_set_default_int(settings, "roll_delay", Data.roll_delay)
     obs.obs_data_set_default_int(settings, "time_to_display", Data.time_to_display)
     obs.obs_data_set_default_int(settings, "deceleration", Data.deceleration)
@@ -269,6 +276,7 @@ def script_properties():
 
     # animation
     obs.obs_properties_add_bool(props, "with_animation", Data.lang.t('with_animation'))
+    obs.obs_properties_add_bool(props, "remove_line", Data.lang.t('remove_line'))
     obs.obs_properties_add_int_slider(props, "time_to_display", Data.lang.t('time_to_display'), 1, 10, 1)
     obs.obs_properties_add_int_slider(props, "roll_delay", Data.lang.t('roll_delay'), 1, 200, 2)
     obs.obs_properties_add_int_slider(props, "deceleration", Data.lang.t('deceleration'), 0, 1000, 50)

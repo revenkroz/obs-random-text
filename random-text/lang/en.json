@@ -3,6 +3,7 @@
     "options": "Options",
     "source": "Source",
     "with_animation": "Enable animation",
+    "remove_line": "Remove line after selection",
     "time_to_display": "[Animation] Show result in... (s)",
     "roll_delay": "[Animation] Roll delay (ms)",
     "deceleration": "[Animation] Deceleration",
