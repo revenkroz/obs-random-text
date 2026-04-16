@@ -1,0 +1,16 @@
+{
+    "description": "Selecciona y muestra una cadena aleatoria del campo de entrada. Tras mostrarla, el plugin la elimina.\n\nPuedes configurar una tecla rápida para seleccionar una cadena aleatoria en los ajustes de OBS (Hotkeys -> \"Seleccionar cadena aleatoria\").",
+    "options": "Opciones",
+    "source": "Fuente",
+    "animation_group": "Animación",
+    "sound_group": "Sonido",
+    "with_animation": "Activada",
+    "remove_line": "Eliminar tras elegir",
+    "time_to_display": "Duración (s)",
+    "roll_delay": "Retardo (ms)",
+    "deceleration": "Desaceleración",
+    "play_sound": "Activado",
+    "sound_path": "Ruta del archivo",
+    "get_random": "Seleccionar cadena aleatoria",
+    "reset": "Restablecer"
+}

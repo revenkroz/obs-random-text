@@ -1,2 +1,4 @@
 /random-text/random-text.settings.json
 __pycache__
+.idea
+.vscode

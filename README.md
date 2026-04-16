@@ -14,17 +14,23 @@ https://user-images.githubusercontent.com/6481750/128868175-1e54b3f8-58a7-4882-9
 
 ## Installation
 
-* Download code and unpack it.
-* Open `Tools / Scripts`, click "add" button, select script.
-* Enjoy!
+Requires OBS 28+. Lua is bundled — nothing else to install.
+
+1. Download the repo, unpack it. Keep `random-text.lua` next to the `random-text/` folder.
+2. Put the folder anywhere readable — OBS remembers the full path you pick.
+3. OBS → **Tools → Scripts → `+`** → pick `random-text.lua`.
+4. Set a hotkey in **Settings → Hotkeys → "Select random string"**.
+
+Scripts have no fixed location (unlike binary plugins in the [OBS plugins guide](https://obsproject.com/kb/plugins-guide)). Suggested folders to keep things tidy:
+
+| Platform       |Path|
+|----------------|-|
+| Windows        |`%APPDATA%\obs-studio\scripts\`|
+| macOS          |`~/Library/Application Support/obs-studio/scripts/`|
+| macOS (in-app) |`/Applications/OBS.app/Contents/Resources/scripts/`|
+| Linux          |`~/.config/obs-studio/scripts/`|
 
 ## F.A.Q.
-
-### Script has no interface
-
-Install Python and add path to install folder in the "Python settings" tab.
-
-For Windows use Python 3.6 as OBS only supports this version.
 
 ### Why are there so few settings and animations?
 

@@ -1,0 +1,16 @@
+{
+    "description": "Sélectionne et affiche une chaîne aléatoire depuis le champ de saisie. Après affichage, le plugin la supprime.\n\nVous pouvez configurer un raccourci pour sélectionner une chaîne aléatoire dans les paramètres d'OBS (Hotkeys -> \"Sélectionner une chaîne aléatoire\").",
+    "options": "Options",
+    "source": "Source",
+    "animation_group": "Animation",
+    "sound_group": "Son",
+    "with_animation": "Activée",
+    "remove_line": "Retirer après choix",
+    "time_to_display": "Durée (s)",
+    "roll_delay": "Délai (ms)",
+    "deceleration": "Décélération",
+    "play_sound": "Activé",
+    "sound_path": "Chemin du fichier",
+    "get_random": "Sélectionner une chaîne aléatoire",
+    "reset": "Réinitialiser"
+}
